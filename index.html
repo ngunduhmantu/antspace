@@ -22,14 +22,28 @@
 </head>
 
 <body class="boxed">
+    
     <iframe src="audio/maherzein1.mp3" type="audio/mp3" allow=”autoplay” id=”audio” style="display:none"></iframe>
-    <audio autoplay>
+    <audio autoplay loop>
     <source src="audio/maherzein1.mp3" type="audio/mp3">
     </audio>
-<!--     <audio autoplay loop>
-        <source src="audio/maherzein1.mp3" type="audio/mp3">
-        <source src="audio/maherzein1.ogg" type="audio/ogg">
+
+    <!-- <iframe src="audio/source.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+    </iframe> 
+
+    <audio autoplay loop id="playAudio">
+        <source src="audio/maherzein1.mp3">
     </audio> -->
+
+    <script>
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (!isChrome){
+        $('#iframeAudio').remove()
+    }
+    else {
+        $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+    }
+    </script>
     
     <!-- Top Nav -->
     <div id="top-nav">
@@ -68,7 +82,7 @@
                 <img src="assets/img/logo-ornament.png" alt="" class="header--ornaments">
                 <h3 class="mt-4 mb-2 font--2" style="position: absolute";>Imam <span class="color--gold font--4">&</span> Umi</h3>
                 <h3 class="mt-4 mb-2 font--2" style="float: right";>Yudha <span class="color--gold font--4">&</span> Fara</h3>
-                <p class="italic text-uppercase spacing--1" style="margin-top: 20%; margin-bottom: -10%;">Selasa - Feb. 16 2020</p>
+                <p class="italic text-uppercase spacing--1" style="margin-top: 20%; margin-bottom: -10%;">sabtu - Feb. 13 2020</p>
             </div>
             <div class="divider--lg"></div>
             <div class="title--xlg text-center">
@@ -87,7 +101,7 @@
                 </div>
                 <div class="col-md-2 col-sm-2 col-6 pr-0 xs--reset--padding my-auto">
                     <div class="photo left">
-                        <img class="bride" src="assets/img/foto1.jpeg" alt="">
+                        <img class="bride carousel-item active" src="assets/img/foto1.jpeg" alt="">
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-2 col-6 pl-0 xs--reset--padding my-auto">
@@ -114,7 +128,7 @@
                 </div>
                 <div class="col-md-2 col-sm-2 col-6 pl-0 xs--reset--padding my-auto" style="left: 5%;">
                     <div class="photo">
-                        <img class="bride" src="assets/img/foto44.jpeg" alt="">
+                        <img class="bride" src="assets/img/foto55.jpeg" alt="">
                         <div class="love">
                             <img src="assets/img/heart.png" alt="">
                         </div>
@@ -223,9 +237,25 @@
         <div class="text-center">
             <img class="gallery--separator" src="assets/img/separator.svg" alt="">
         </div>
+        <div style="text-align: center; margin-top: -15%; margin-bottom: -35%;">
+            <h3>Panduan Protokol Kesehatan</h3>
+            <p style="margin-bottom: 2%;">
+                Acara ini diselenggarakan dengan tetap menjalankan protokol kesehatan yang harus dipatuhi demi mencegah penyebaran wabah Covid-19. Tanpa mengurangi rasa hormat, para tamu undangan dihimbau untuk melakukan hal berikut.
+            </p>
+            <p style="float: left; margin: 0;">Menggunakan Masker</p>
+            <p style="float: right; margin: 0;">Mencuci Tangan</p>
+            <p style="float: left; margin: 0;">Menggunakan Hand Sanitizer</p>
+            <p style="float: right; margin: 0;">Cek Suhu Tubuh</p>
+            <p style="float: left; margin: 0; padding-bottom: 0%;">Tidak Berjabat Tangan</p>
+            <p style="float: right; margin: 0; padding-bottom: 0%;">Tidak Berkrumun</p>
+        </div>
+        <div class="text-center" style="margin-bottom: -10%; margin-top: -10%;">
+            <img class="gallery--separator" src="assets/img/separator.svg" alt="">
+        </div>
+        
             <div class="title--lg text-center">
                 <h2 class="font--4 color--gold">Gallery</h2>
-                <p class="text-uppercase bold italic spacing--1">OUR STORIES</p>
+                <p class="text-uppercase bold italic spacing--1" style="margin-bottom: -5%;">OUR STORIES</p>
             </div>
             <div class="divider"></div>
             <div class="header--photo">
