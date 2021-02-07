@@ -23,10 +23,23 @@
 
 <body class="boxed">
     
-    <iframe src="audio/maherzein1.mp3" type="audio/mp3" allow=”autoplay” id=”audio” style="display:none"></iframe>
+<!--     <iframe src="audio/maherzein1.mp3" type="audio/mp3" allow=”autoplay” id=”audio” style="display:none"></iframe>
     <audio hidden autoplay loop>
     <source src="audio/maherzein1.mp3" type="audio/mp3">
-    </audio>
+    </audio> -->
+    
+    <audio id="musicplayer" autoplay>
+        <source src="audio/maherzein1.mp3">
+      </audio>
+      
+      
+      <script>
+      var vid = document.getElementById("myVideo");
+      function handleFirstPlay(event) {
+        let vid = event.target;
+        vid.onplay = null;
+      }
+      </script>
 
     <!-- <iframe src="audio/source.mp3" allow="autoplay" style="display:none" id="iframeAudio">
     </iframe> 
